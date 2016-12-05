@@ -6,3 +6,5 @@ My first drupal theme
 
 [Live Preview (Drupal)](http://opencharitycsnccyorec.devcloud.acquia-sites.com)
 
+![PNG](preview.png)
+
