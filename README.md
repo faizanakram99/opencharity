@@ -2,4 +2,7 @@
 Drupal Theme
 My first drupal theme
 
-Click [here](http://opencharitycsnccyorec.devcloud.acquia-sites.com) to view the live preview
+[Live Preview (HTML/CSS)](http://faizanakram.me/opencharity)
+
+[Live Preview (Drupal)](http://opencharitycsnccyorec.devcloud.acquia-sites.com)
+
