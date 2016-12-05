@@ -19,6 +19,11 @@ header{
   @include mQ("768px"){
     height: auto;
   }
+	img{
+		@include mQ("480px"){
+			max-width: 60%;
+		}
+	}
   .menu-container{
     flex-direction: row;
     @include mQ("768px"){
@@ -36,6 +41,9 @@ header{
       right: 20px;
       top: 10px;
       cursor: pointer;
+			@include mQ("390px"){
+		    top:0;
+		  }
     }
   }
   .menu{
@@ -265,7 +273,7 @@ main{
 		.wrapper{
 			padding: 0 40px;
 			@include mQ("768px"){
-				padding: 0 20px;				
+				padding: 0 20px;
 			};
 		}
 		&-item{
