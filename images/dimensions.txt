@@ -1,0 +1,26 @@
+image : x , y , WxH
+
+logo : 155, 40, 340x70
+
+banner : 0, 159, 2524x904
+
+section2_meetup : 354, 1505, 320x230
+section2_slack : 1116, 1505, 320x230
+section2_share : 1861 , 1505, 320x230
+
+section3_charity : 420, 2576, 200x200
+section3_people : 1179, 2576, 200x200
+section3_thumb : 1939 , 2576, 200x200
+
+
+section4_cancer: 169, 3320, 300x190
+section4_cancer: 665, 3320, 300x190
+section4_cancer: 1154, 3320, 300x190
+section4_cancer: 1637, 3320, 300x190
+section4_comic: 2113, 3320, 300x190
+section4_5_dot_active : 1207, 3590 , 20x20
+section4_5_dot : 1287, 3590 , 20x20
+
+footer_facebook: 1154, 4358, 45x45
+footer_facebook: 1226, 4358, 45x45
+footer_facebook: 1309, 4358, 45x45

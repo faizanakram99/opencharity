@@ -14,16 +14,16 @@ header{
   box-sizing: border-box;
   position: fixed;
   width: 100%;
-	top: 0;
+  top: 0;
   z-index: 2;
   @include mQ("768px"){
     height: auto;
   }
-	img{
-		@include mQ("480px"){
-			max-width: 60%;
-		}
-	}
+  img{
+    @include mQ("768px"){
+      max-width: 60%;
+    }
+  }
   .menu-container{
     flex-direction: row;
     @include mQ("768px"){
@@ -41,9 +41,6 @@ header{
       right: 20px;
       top: 10px;
       cursor: pointer;
-			@include mQ("390px"){
-		    top:0;
-		  }
     }
   }
   .menu{
@@ -272,9 +269,6 @@ main{
 		background-color: $white;
 		.wrapper{
 			padding: 0 40px;
-			@include mQ("768px"){
-				padding: 0 20px;
-			};
 		}
 		&-item{
 			.bold{

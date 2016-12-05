@@ -129,7 +129,7 @@ header {
   @media screen and (max-width: 768px) {
     header {
       height: auto; } }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     header img {
       max-width: 60%; } }
   header .menu-container {
@@ -149,10 +149,6 @@ header {
         right: 20px;
         top: 10px;
         cursor: pointer; } }
-  @media screen and (max-width: 768px) and (max-width: 390px) {
-    header .menu-toggle {
-      top: 0; } }
-
   header .menu {
     padding: 1.2em 0;
     text-align: right; }
@@ -373,9 +369,6 @@ main {
     background-color: #fff; }
     main .blog .wrapper {
       padding: 0 40px; }
-      @media screen and (max-width: 768px) {
-        main .blog .wrapper {
-          padding: 0 20px; } }
     main .blog-item .bold {
       color: #5ebfbd;
       border-bottom: 2px solid #d9dadd;

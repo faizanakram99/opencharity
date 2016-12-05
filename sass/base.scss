@@ -69,7 +69,7 @@ body{
 	align-content: center;
 	@include mQ("768px"){
 		flex-direction: column;
-	};
+	}
 }
 
 .button-white{
