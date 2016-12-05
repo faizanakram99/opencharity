@@ -1,0 +1,341 @@
+@import "base";
+
+body,button{
+	font-size: 16px;
+  @include mQ("960px"){
+    font-size: 14px;
+  }
+}
+
+header{
+  background: $white;
+  height: 6em;
+  padding: 1.8em 0;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+	top: 0;
+  z-index: 2;
+  @include mQ("768px"){
+    height: auto;
+  }
+  .menu-container{
+    flex-direction: row;
+    @include mQ("768px"){
+      flex-direction: column;
+    };
+  }
+  .menu-toggle{
+    display: none;
+    background: url("../images/menu-toggle.png") no-repeat;
+    @include mQ("768px"){
+      display: block;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      cursor: pointer;
+    }
+  }
+  .menu{
+    padding: 1.2em 0;
+    text-align: right;
+    @include mQ("768px"){
+      text-align: left;
+			@include close;
+			&.open{
+			@include open;
+			}
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      @include mQ("768px"){
+        display: block;
+        text-align: center;
+      }
+    }
+    li{
+      display: block;
+      &:nth-child(2){
+        margin: 0 2em;
+        @include mQ("768px"){
+          margin: 0;
+        }
+      }
+      a{
+        @include mQ("768px"){
+          padding: 1.2em 0;
+          border-top: 1px solid $lightblue;
+          display: block;
+        }
+      }
+    }
+    &-item{
+      color:$darkBlack;
+      &:hover{
+        color: $buttonLight;
+        @include mQ("768px"){
+          background: $buttonLight;
+          color: $white;
+          &.button-link{
+            background: $white;
+            color: $buttonLight;
+          }
+        }
+      }
+      &-button{
+        position: relative;
+        top: -1em;
+        @include mQ("768px"){
+          position: static;
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+  @include clearFix();
+}
+
+form{
+	@include close;
+	&.open{
+	@include open;
+	padding-top: 100px !important;
+	}
+	input,textarea, button{
+		display: block;
+		margin: 10px auto;
+		max-width: 600px;
+		width: 100%;
+		padding: 8px 5px;
+		border-radius: 4px;
+		border: 1px solid $buttonLight;
+	}
+
+
+}
+
+main{
+  padding-top: 6em;
+  .banner-section{
+    background-color: $white;
+    margin-top: -20px;
+    .lead-banner{
+      padding-top: 20px;
+      background: url("../images/banner.jpg") no-repeat center 84px;
+      background-attachment: fixed;
+      background-blend-mode: soft-light;
+      background-color: $shadow;
+      height: 400px;
+      position: relative;
+      .banner-overlay{
+        position: absolute;
+        top: 15%;
+        margin: 0 auto;
+        left: 20%;
+				right: 20%;
+        color: $white;
+				@include mQ("768px"){
+					left: 5%;
+					right: 5%;
+				};
+        @include clearFix;
+        p{
+          text-align: center;
+          margin-bottom: 25px;
+        }
+        p.banner-title{
+          text-transform: uppercase;
+          font-size: 3em;
+          font-weight: lighter;
+        }
+        p.large{
+          font-weight: 1.1em;
+        }
+      }
+    }
+  }
+  .events{
+    padding: 40px 0;
+    &-details{
+      &-timings{
+        color: $darkBlack;
+        margin-bottom: 20px;
+        span{
+          color: $buttonLight;
+        }
+      }
+      &-location{
+        color: $lightBlack;
+      }
+    }
+		&-register{
+			@include mQ("768px"){
+				margin: 20px 0 0;
+			};
+		}
+    @include clearFix;
+  }
+  .getinvolved{
+    background-color: $white;
+		padding-bottom: 2.3em;
+		&-item{
+			text-align: center;
+			img{
+				max-width: 250px;
+			}
+			h3{
+				color: $darkBlack;
+			}
+			p{
+				color: $lightBlack;
+				margin-bottom: 20px;
+			}
+			button{
+				width: 80%;
+			}
+		}
+  }
+	.ourmission{
+		.wrapper{
+			border-bottom: 2px solid $bordergrey;
+		}
+		&-text{
+			color: $lightBlack;
+			text-align: center;
+			margin-bottom: 2em;
+		}
+		&-item{
+			&:nth-of-type(2){
+				margin: 0 20px;
+				@include mQ("768px"){
+					margin: 0;
+				};
+			}
+			img{
+				max-width: 100px
+			}
+			&-text{
+				background-color: $white;
+				position: relative;
+				top: -2.7em;
+				padding: 3em 15px 2.5em;
+				border-radius: 5px;
+				z-index: -1;
+				@include clearFix;
+				& p.bold{
+					color: $buttonLight;
+					text-align: center;
+					margin-bottom: 20px;
+				}
+				p{
+					color: $lightBlack;
+					text-align: center;
+				}
+			}
+		}
+	}
+	.ourmembers{
+		padding-bottom: 25px;
+		&-item img{
+			max-width: 60%;
+			margin-bottom: 40px;
+		}
+		.dots{
+			text-align: center;
+			margin: 0 auto;
+			word-spacing: 15px;
+			&-link{
+				background: url("../images/section4_5_dot.jpg") no-repeat;
+				display: inline-block;
+				height: 20px;
+				width: 20px;
+				cursor: pointer;
+				&.active{
+					background: url("../images/section4_5_dot_active.jpg") no-repeat;
+				}
+			}
+		}
+	}
+	.blog{
+		background-color: $white;
+		.wrapper{
+			padding: 0 40px;
+			@include mQ("768px"){
+				padding: 0 20px;				
+			};
+		}
+		&-item{
+			.bold{
+				color: $buttonLight;
+				border-bottom: 2px solid $bordergrey;
+				padding-bottom: 10px;
+				margin-bottom: 20px;
+			}
+			.lorem{
+				color: $lightBlack;
+				padding: 20px 0;
+				font-size: 0.8em;
+				border-bottom: 2px solid $bordergrey;
+			}
+			.date{
+				color: $lightBlack;
+				padding: 20px 0;
+			}
+		}
+		.left{
+			position: relative;
+			font-size: 2em;
+			top: 7.5em;
+			left: 10px;
+			width: 100px;
+			float: left;
+			color: $buttonLight;
+			@include mQ("769px"){
+				display: none;
+			};
+		}
+		.right{
+			float: right;
+	    position: relative;
+	    top: -3.99em;
+			right: 10px;
+	    text-align: right;
+	    font-size: 2em;
+			color: $buttonLight;
+			@include mQ("960px"){
+				top: -4.5em;
+			};
+			@include mQ("769px"){
+				display: none;
+			};
+		}
+	}
+	footer{
+		background-color: $footerback;
+		text-align: center;
+		.social{
+			border-bottom: 2px solid $footerBorder;
+			padding: 30px 0;
+			a{
+				display: inline-block;
+				cursor: pointer;
+				img{
+					max-width: 30px;
+				}
+			}
+		}
+		.footer-text{
+			color: $footerGrey;
+			padding: 25px 0;
+			a{
+				color: $footerBlue;
+				cursor: pointer;
+			}
+		}
+
+	}
+}

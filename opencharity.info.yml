@@ -1,0 +1,8 @@
+name: opencharity
+type: theme
+description: A theme without using any framework
+core: 8.x
+regions:
+  content: Content
+libraries:
+  - opencharity/global-styling
